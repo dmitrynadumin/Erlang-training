@@ -1,0 +1,34 @@
+退1> c(ms).
+{ok,ms}
+2> ms:start(0).
+Should be at least 1 slave.
+ok
+3> ms:start(4).
+[{1,<0.88.0>},{2,<0.89.0>},{3,<0.90.0>},{4,<0.91.0>}]true
+4> ms:to_slave(hello,2).
+Slave 2 got message hello
+{hello,2}
+5> ms:to_slave(hello,5).
+There is no such element
+.{hello,5}
+6> ms:to_slave(hello,0).
+There is no such element
+.{hello,0}
+7> ms:to_slave(die,0).  
+There is no such element
+.{die,0}
+8> ms:to_slave(die,3).
+Master restarting dead slave 3.
+{die,3}
+9> ms:to_slave(hello,3).
+Slave 3 got message hello
+{hello,3}
+10> ms:to_slave(die,3).  
+Master restarting dead slave 3.
+{die,3}
+11> ms:to_slave(die,3).
+Master restarting dead slave 3.
+{die,3}
+12> ms:to_slave(hello,3).
+Slave 3 got message hello
+{hello,3}

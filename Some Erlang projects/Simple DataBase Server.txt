@@ -1,0 +1,79 @@
+3> db_list:start().
+Current data base 
+[]
+ok
+4> db_list:insert(dima,russia).
+Current data base 
+[{dima,russia}]
+ok
+5> db_list:insert(dima,russia).
+Current data base 
+[{dima,russia}]
+already_inserted
+6> db_list:insert(masha,russia).
+Current data base 
+[{masha,russia},{dima,russia}]
+ok
+7> db_list:insert(joe,sweden).  
+Current data base 
+[{joe,sweden},{masha,russia},{dima,russia}]
+ok
+8> db_list:insert(joe,england).
+Current data base 
+[{joe,england},{joe,sweden},{masha,russia},{dima,russia}]
+ok
+9> db_list:where_is(joe).
+Current data base 
+[{joe,england},{joe,sweden},{masha,russia},{dima,russia}]
+england
+10> db_list:where_is(joe).
+Current data base 
+[{joe,england},{joe,sweden},{masha,russia},{dima,russia}]
+england
+11> db_list:where_is(dima).
+Current data base 
+[{joe,england},{joe,sweden},{masha,russia},{dima,russia}]
+russia
+12> db_list:remove(joe).
+Current data base 
+[{joe,sweden},{masha,russia},{dima,russia}]
+ok
+13> db_list:remove(joe).
+Current data base 
+[{masha,russia},{dima,russia}]
+ok
+14> db_list:insert(joe,england).
+Current data base 
+[{joe,england},{masha,russia},{dima,russia}]
+ok
+15> db_list:located_at(russia). 
+Current data base 
+[{joe,england},{masha,russia},{dima,russia}]
+[dima,masha]
+16> db_list:where_is(rita).     
+Current data base 
+[{joe,england},{masha,russia},{dima,russia}]
+{no_such_name,rita}
+17> db_list:remove(rita).  
+Current data base 
+[{joe,england},{masha,russia},{dima,russia}]
+ok
+18> db_list:located_at(rita). 
+Current data base 
+[{joe,england},{masha,russia},{dima,russia}]
+none
+19> db_list:located_at(joe). 
+Current data base 
+[{joe,england},{masha,russia},{dima,russia}]
+none
+20> db_list:located_at(england).
+Current data base 
+[{joe,england},{masha,russia},{dima,russia}]
+[joe]
+21> db_list:located_at(sweden). 
+Current data base 
+[{joe,england},{masha,russia},{dima,russia}]
+none
+22> db_list:stop().
+server_terminated
+23> 

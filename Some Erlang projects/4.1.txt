@@ -1,0 +1,31 @@
+21> c(start_two_proc).            
+start_two_proc.erl:8:8: Warning: variable 'Message' is unused
+%    8| client(Message,0,Server_Pid)->
+%     |        ^
+
+{ok,start_two_proc}
+22> start_two_proc:start(hello,1).
+The message has been delivered and returned.
+<0.158.0>
+The client has been finished.
+The server has been finished.
+23> start_two_proc:start(hello,0).
+The client has been finished.
+The server has been finished.
+<0.161.0>
+24> start_two_proc:start(hello,4).
+The message has been delivered and returned.
+<0.164.0>
+The message has been delivered and returned.
+The message has been delivered and returned.
+The message has been delivered and returned.
+The client has been finished.
+The server has been finished.
+25> start_two_proc:start(5,4).    
+The message has been delivered and returned.
+<0.167.0>
+The message has been delivered and returned.
+The message has been delivered and returned.
+The message has been delivered and returned.
+The client has been finished.
+The server has been finished.

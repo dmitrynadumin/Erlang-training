@@ -1,0 +1,28 @@
+1.Entering a program
+
+
+1> c(demo).
+{ok,demo}
+2> demo:double(12).
+24
+
+
+2.Simple sequential programs
+
+1 and 2:
+1> c(temp).
+{ok,temp}
+2> temp:convert({c,100}).
+{f,212.0}
+3> temp:convert({f,32}). 
+{c,0.0}
+
+3:Write a function mathStuff:perimeter(Form)
+
+11> c(mathStuff).                         
+{ok,mathStuff}
+12> mathStuff:perimeter({square,5}).      
+20
+13> mathStuff:perimeter({circle,5}).      
+31.400000000000002
+14> mathStuff:perimeter({triangle,3,4,5}).

@@ -1,0 +1,29 @@
+8> star:start(3,hello,1).
+Central process created. Its PID is <0.106.0>
+
+<0.106.0>
+PIDs of other processes are [<0.107.0>,<0.108.0>]
+A message <hello> has received from <0.106.0> to <0.108.0>.
+A message <hello> has received from <0.106.0> to <0.107.0>.
+The process <0.108.0> received the message from <0.106.0>.
+The process <0.107.0> received the message from <0.106.0>.
+The process <0.106.0> has been stopped.
+The process <0.107.0> has been stopped.
+The process <0.108.0> has been stopped.
+9> star:start(3,hello,2).
+Central process created. Its PID is <0.110.0>
+
+<0.110.0>
+PIDs of other processes are [<0.111.0>,<0.112.0>]
+A message <hello> has received from <0.110.0> to <0.111.0>.
+A message <hello> has received from <0.110.0> to <0.112.0>.
+The process <0.112.0> received the message from <0.110.0>.
+The process <0.111.0> received the message from <0.110.0>.
+A message <hello> has received from <0.110.0> to <0.111.0>.
+A message <hello> has received from <0.110.0> to <0.112.0>.
+The process <0.111.0> received the message from <0.110.0>.
+The process <0.112.0> received the message from <0.110.0>.
+The process <0.110.0> has been stopped.
+The process <0.111.0> has been stopped.
+The process <0.112.0> has been stopped.
+10> 

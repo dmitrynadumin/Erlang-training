@@ -1,0 +1,41 @@
+1.
+
+
+2> c(lists1).
+{ok,lists1}
+4> lists1:my_min([5,5,5,5]).
+5
+5> lists1:my_min([5,5,5,4]).  
+4
+6> lists1:my_min([5,5,5,4,-1,-2]).
+-2
+8> lists1:my_min([]).
+Empty list
+ok
+
+2.
+
+
+10> lists1:my_max([5,5,5,4,-1,-2]).
+5
+11> lists1:my_max([-1-1,-1,-2]).   
+-1
+12> lists1:my_max([-1-1,-1,-2,-2,-10,10]).
+10
+13> c(lists1).                            
+{ok,lists1}
+
+3.
+
+
+14> lists1:min_max([4,1,7,3,9,10]).       
+{1,10}
+
+
+4.
+55> c(time).
+{ok,time}
+56> time:swedish_date().
+"220224"
+
+

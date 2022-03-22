@@ -1,0 +1,97 @@
+1> c(ring).
+{ok,ring}
+2> ring:start(3,hello,1).
+First process was created.
+<0.86.0>
+hello from <0.86.0>
+hello from <0.87.0>
+hello from <0.88.0>
+The message passed through the ring.
+All created process was closed.
+3> ring:start(3,hello,2).
+First process was created.
+<0.90.0>
+hello from <0.90.0>
+hello from <0.91.0>
+hello from <0.92.0>
+The message passed through the ring.
+hello from <0.90.0>
+hello from <0.91.0>
+hello from <0.92.0>
+The message passed through the ring.
+All created process was closed.
+4> c(ring).              
+{ok,ring}
+5> ring:start(3,hello,2).
+First process was created.
+<0.99.0>
+hello from <0.99.0>
+hello from <0.100.0>
+hello from <0.101.0>
+The message passed through the ring.
+hello from <0.99.0>
+hello from <0.100.0>
+hello from <0.101.0>
+The message passed through the ring.
+All created process was closed.
+6> ring:start(4,hello,3).
+First process was created.
+<0.103.0>
+hello from <0.103.0>
+hello from <0.104.0>
+hello from <0.105.0>
+hello from <0.106.0>
+The message passed through the ring.
+hello from <0.103.0>
+hello from <0.104.0>
+hello from <0.105.0>
+hello from <0.106.0>
+The message passed through the ring.
+hello from <0.103.0>
+hello from <0.104.0>
+hello from <0.105.0>
+hello from <0.106.0>
+The message passed through the ring.
+All created process was closed.
+7> ring:start(3,hello,1). 
+First process was created.
+<0.108.0>
+hello from <0.108.0>
+hello from <0.109.0>
+hello from <0.110.0>
+The message passed through the ring.
+All created process was closed.
+8> ring:start(3,hello,0).
+To create a ring, you need at least 2 nodes and 1 times.
+<0.112.0>
+9> ring:start(2,hello,1).
+First process was created.
+<0.114.0>
+hello from <0.114.0>
+hello from <0.115.0>
+The message passed through the ring.
+All created process was closed.
+10> ring:start(1,hello,1).
+To create a ring, you need at least 2 nodes and 1 times.
+<0.117.0>
+11> ring:start(1,hello,-1).
+To create a ring, you need at least 2 nodes and 1 times.
+<0.119.0>
+12> ring:start(-1,hello,-1).
+To create a ring, you need at least 2 nodes and 1 times.
+<0.121.0>
+13> ring:start(2,[],1).     
+First process was created.
+<0.123.0>
+[] from <0.123.0>
+[] from <0.124.0>
+The message passed through the ring.
+All created process was closed.
+15> ring:start(2,{aaa,bbb},1).  
+First process was created.
+<0.129.0>
+{aaa,bbb} from <0.129.0>
+{aaa,bbb} from <0.130.0>
+The message passed through the ring.
+All created process was closed.
+16> 

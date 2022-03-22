@@ -1,0 +1,43 @@
+{ok,star}
+2> star:start(1,hello,1).
+To create a star, you need at least 2 nodes and 1 times.
+<0.86.0>
+3> star:start(2,hello,0).
+To create a star, you need at least 2 nodes and 1 times.
+<0.88.0>
+4> star:start(2,hello,1).
+Central process created. Its PID is <0.90.0>
+
+New process created. Its PID is <0.91.0>
+<0.90.0>
+hello from <0.91.0>
+hello from <0.90.0>
+All processes have been successfully terminated.
+5> star:start(3,hello,2).
+Central process created. Its PID is <0.93.0>
+
+<0.93.0>
+New process created. Its PID is <0.94.0>
+hello from <0.94.0>
+New process created. Its PID is <0.96.0>
+hello from <0.93.0>
+hello from <0.96.0>
+hello from <0.94.0>
+hello from <0.93.0>
+hello from <0.93.0>
+hello from <0.96.0>
+hello from <0.93.0>
+All processes have been successfully terminated.
+6> star:start(2,hello,3).
+Central process created. Its PID is <0.97.0>
+
+<0.97.0>
+New process created. Its PID is <0.98.0>
+hello from <0.98.0>
+hello from <0.97.0>
+hello from <0.98.0>
+hello from <0.97.0>
+hello from <0.98.0>
+hello from <0.97.0>
+All processes have been successfully terminated.
+7> 
